@@ -7,11 +7,6 @@
 # Add common definitions for Qualcomm
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
 
-# Alert slider
-PRODUCT_PACKAGES += \
-    KeyHandler \
-    tri-state-key-calibrate
-
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@6.0-impl \
