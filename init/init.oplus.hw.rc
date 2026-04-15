@@ -4,17 +4,73 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-on property:ro.boot.rf_version=11
+# horee
+on property:ro.boot.prjname=20061
     setprop ro.boot.hardware.revision "CN"
 
-on property:ro.boot.rf_version=12
-    setprop ro.boot.hardware.revision "TMO"
+on property:ro.boot.prjname=20062
+    setprop ro.boot.hardware.revision "CN"
 
-on property:ro.boot.rf_version=13
-    setprop ro.boot.hardware.revision "IN"
+# hima
+on property:ro.boot.prjname=20135
+    setprop ro.boot.hardware.revision "CN"
 
-on property:ro.boot.rf_version=14
+on property:ro.boot.prjname=20137
+    setprop ro.boot.hardware.revision "CN"
+
+on property:ro.boot.prjname=20139
+    setprop ro.boot.hardware.revision "CN"
+
+on property:ro.boot.prjname=20235
     setprop ro.boot.hardware.revision "EU"
 
-on property:ro.boot.rf_version=15
-    setprop ro.boot.hardware.revision "NA"
+# jin
+on property:ro.boot.prjname=20161
+    setprop ro.boot.hardware.revision "CN"
+
+on property:ro.boot.prjname=20163
+    setprop ro.boot.hardware.revision "CN"
+
+on property:ro.boot.prjname=20351
+    setprop ro.boot.hardware.revision "EU"
+
+# bladerunner
+on property:ro.boot.prjname=19795
+    setprop ro.boot.hardware.revision "CN"
+
+on property:ro.boot.prjname=19706
+    setprop ro.boot.hardware.revision "IN"
+
+on property:ro.boot.prjname=19705
+    setprop ro.boot.hardware.revision "EU"
+
+# bladerunner_48m
+on property:ro.boot.prjname=20607
+    setprop ro.boot.hardware.revision "CN"
+
+# rivena
+on property:ro.boot.prjname=21615
+    setprop ro.boot.hardware.revision "CN"
+
+# bitra
+on property:ro.boot.prjname=21619
+    setprop ro.boot.hardware.revision "CN"
+
+on property:ro.boot.prjname=2161A
+    setprop ro.boot.hardware.revision "CN"
+
+on property:ro.boot.prjname=2169A
+    setprop ro.boot.hardware.revision "IN"
+
+on property:ro.boot.prjname=2169B
+    setprop ro.boot.hardware.revision "EU"
+
+# spartan
+on property:ro.boot.prjname=21623
+    setprop ro.boot.hardware.revision "CN"
+
+on property:ro.boot.prjname=21732
+    setprop ro.boot.hardware.revision "IN"
+
+on property:ro.boot.prjname=21733
+    setprop ro.boot.hardware.revision "EU"
