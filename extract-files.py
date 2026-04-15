@@ -44,7 +44,6 @@ def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
 lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
     (
-        'com.qti.stats.pdlib',
         'com.qualcomm.qti.dpm.api@1.0',
         'libmmosal',
         'vendor.qti.hardware.wifidisplaysession@1.0',
@@ -107,22 +106,11 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libinput_shim.so'),
     'vendor/etc/msm_irqbalance.conf': blob_fixup()
         .regex_replace('IGNORED_IRQ=27,23,38$', 'IGNORED_IRQ=27,23,38,115,332'),
-    'vendor/lib64/hw/com.qti.chi.override.so': blob_fixup()
-        .add_needed('libcamera_metadata_shim.so')
-        .binary_regex_replace(b'com.oem.autotest', b'\x00om.oem.autotest'),
-    ('vendor/lib64/libarcsoft_hta.so', 'vendor/lib64/libarcsoft_superportrait.so', 'vendor/lib64/libarcsoft_hdrplus_hvx_stub.so', 'vendor/lib64/libarcsoft_high_dynamic_range_v4.so', 'vendor/lib64/libarcsoft_mfsr_frt.so', 'vendor/lib64/libarcsoft_super_night_raw.so', 'vendor/lib64/libarcsoft_dualcam_refocus_preview.so'): blob_fixup()
-        .clear_symbol_version('remote_handle_close')
-        .clear_symbol_version('remote_handle_invoke')
-        .clear_symbol_version('remote_handle_open')
-        .clear_symbol_version('remote_register_buf_attr')
-        .clear_symbol_version('remote_register_buf'),
     'vendor/lib64/libdpps.so': blob_fixup()
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
     'vendor/lib64/sensors.ssc.so': blob_fixup()
         .binary_regex_replace(b'qti.sensor.wise_light', b'android.sensor.light\x00')
         .sig_replace('F1 E9 D3 84 52 49 3F A0 72', 'F1 A9 00 80 52 09 00 A0 72'),
-    'vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so': blob_fixup()
-        .call(blob_fixup_nop_call, 'bl', '__cfi_check', '_ZN7android8hardware22configureRpcThreadpoolEmb@plt'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
