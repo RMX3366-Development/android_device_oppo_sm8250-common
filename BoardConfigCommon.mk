@@ -7,8 +7,7 @@
 COMMON_PATH := device/oppo/sm8250-common
 
 # A/B
-AB_OTA_UPDATER := true
-
+ifeq ($(AB_OTA_UPDATER),true)
 AB_OTA_PARTITIONS += \
     boot \
     dtbo \
@@ -20,6 +19,7 @@ AB_OTA_PARTITIONS += \
     vbmeta \
     vbmeta_system \
     vendor
+endif
 
 # Architecture
 TARGET_ARCH := arm64
