@@ -123,7 +123,7 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)/releasetools
 ENABLE_VENDOR_RIL_SERVICE := true
 
 # Security
-VENDOR_SECURITY_PATCH := 2024-10-05
+VENDOR_SECURITY_PATCH := 2025-08-01
 
 # SEPolicy
 include device/lineage/sepolicy/libion/sepolicy.mk
