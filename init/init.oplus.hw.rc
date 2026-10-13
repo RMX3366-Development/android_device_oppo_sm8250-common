@@ -3,3 +3,37 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 #
+
+# horee
+on property:ro.boot.prjname=20061
+    setprop ro.boot.hardware.revision "CN"
+
+on property:ro.boot.prjname=20062
+    setprop ro.boot.hardware.revision "CN"
+
+# hima
+on property:ro.boot.prjname=20135
+    setprop ro.boot.hardware.revision "CN"
+
+on property:ro.boot.prjname=20137
+    setprop ro.boot.hardware.revision "CN"
+
+on property:ro.boot.prjname=20139
+    setprop ro.boot.hardware.revision "CN"
+
+on property:ro.boot.prjname=20235
+    setprop ro.boot.hardware.revision "EU"
+
+# jin
+on property:ro.boot.prjname=20161
+    setprop ro.boot.hardware.revision "CN"
+
+on property:ro.boot.prjname=20163
+    setprop ro.boot.hardware.revision "CN"
+
+on property:ro.boot.prjname=20351
+    setprop ro.boot.hardware.revision "EU"
+
+# rivena
+on property:ro.boot.prjname=21615
+    setprop ro.boot.hardware.revision "CN"
